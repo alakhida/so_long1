@@ -75,7 +75,7 @@ int get_next_pos(t_map *map, int x, int y)
 	int player_pos;
 	int next_pos;
 	player_pos = get_position(map->map_holder, 'P');
-	pos_gitm(map, player_pos);
+	pos_to_dim(map, player_pos);
 	next_pos = dim_to_pos(map->map_holder, map->player_x + x, map->player_y + y);
 	return (next_pos);
 }
