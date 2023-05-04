@@ -6,13 +6,13 @@
 #    By: alakhida <alakhida@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 21:41:43 by alakhida          #+#    #+#              #
-#    Updated: 2023/05/02 00:23:43 by alakhida         ###   ########.fr        #
+#    Updated: 2023/05/04 20:08:13 by alakhida         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = so_long
 
-SRC = so_long.c errors_checker.c read_map.c check_pce.c tools.c check_path.c render.c
+SRC = so_long.c errors_checker.c read_map.c check_pce.c tools.c check_path.c render.c movement.c move_handler.c
 
 CC = cc
 
