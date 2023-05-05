@@ -6,7 +6,7 @@
 #    By: alakhida <alakhida@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/04/13 21:41:43 by alakhida          #+#    #+#              #
-#    Updated: 2023/05/04 20:08:13 by alakhida         ###   ########.fr        #
+#    Updated: 2023/05/05 22:50:59 by alakhida         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,7 +18,7 @@ CC = cc
 
 LIBFT = ./libft/libft.a
 
-# CFLAGS = -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 OBJS = ${SRC:.c=.o}
 

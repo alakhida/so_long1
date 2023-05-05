@@ -6,7 +6,7 @@
 /*   By: alakhida <alakhida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 21:41:42 by alakhida          #+#    #+#             */
-/*   Updated: 2023/05/04 20:12:28 by alakhida         ###   ########.fr       */
+/*   Updated: 2023/05/05 22:55:51 by alakhida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,9 +76,9 @@ void			check_map(int ac, char *av, t_map *map);
 void			check_path_1(t_map map, char *av);
 int				check_path(char *path);
 void			put_win(t_map *map);
-void			pos_to_dim(t_map *map, int position);
+void			pos_to_dim(t_map *map, unsigned int position);
 int				get_position(char *map, char c);
-unsigned int	dim_to_pos(char *map, int player_x, int player_y);
+unsigned int	dim_to_pos(char *map, size_t player_x, size_t player_y);
 void			check_pce01(t_map *map);
 void			go_right(t_map *map);
 void			go_up(t_map *map);

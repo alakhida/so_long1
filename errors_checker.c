@@ -6,7 +6,7 @@
 /*   By: alakhida <alakhida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/13 21:41:34 by alakhida          #+#    #+#             */
-/*   Updated: 2023/05/04 19:59:53 by alakhida         ###   ########.fr       */
+/*   Updated: 2023/05/05 22:30:04 by alakhida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,8 +46,8 @@ int	check_file_exist(char *path)
 	int		fd;
 
 	fd = open(path, O_RDONLY);
-	if (fd == -1)
-		return (0);
+	if (fd < 0)
+		exit (1);
 	close(fd);
 	return (1);
 }
@@ -72,6 +72,8 @@ void	print_errors(int i)
 		ft_putstr("\033[0;33m can't collect tokens\n");
 	else if (i == 9)
 		ft_putstr("\033[0;33m please check elemnts\n");
+	else if (i == 10)
+		ft_putstr("\033[0;33m the file is empty!\n");
 	exit(1);
 }
 
@@ -82,6 +84,6 @@ int	check_file(char *path)
 		print_errors (3);
 	}
 	if (!check_file_exist(path))
-		print_errors (3);
+		print_errors (10);
 	return (1);
 }

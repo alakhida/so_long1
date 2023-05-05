@@ -6,7 +6,7 @@
 /*   By: alakhida <alakhida@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/04/26 19:31:45 by alakhida          #+#    #+#             */
-/*   Updated: 2023/05/04 20:26:38 by alakhida         ###   ########.fr       */
+/*   Updated: 2023/05/05 22:51:49 by alakhida         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ void	ft_rectangular_check(char *argv)
 	char	*map;
 	char	**map_splited;
 	int		idx;
-	int		len;
+	size_t	len;
 
 	idx = 0;
 	map = read_map(argv);
@@ -101,16 +101,17 @@ int	issurroundedbywalls(char *path, t_map *map)
 	{
 		if (map->blocks[0][map->i] != '1' ||
 			map->blocks[map->rows - 1][map->i] != '1')
-			exit (1);
+			print_errors(1);
 		map->i++;
 	}
 	map->j = 0;
-	while (map->j != '\0')
+	while (map->blocks[map->j] != '\0')
 	{
 		if (map->blocks[map->j][0] != '1' ||
 			map->blocks[map->j][map->cols - 1] != '1')
-			exit (1);
+			print_errors(1);
 		map->j++;
 	}
+	free2d(map->blocks);
 	return (1);
 }
